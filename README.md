@@ -1,6 +1,6 @@
 # TabLens
 
-Youtube link: https://youtu.be/7Bm1v3G9xG8
+https://youtu.be/7Bm1v3G9xG8
 
 A beautiful, truly zero-config Firefox extension that reads every open tab and summarizes each one in 1–2 sentences.
 
