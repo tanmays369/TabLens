@@ -1,14 +1,12 @@
 # TabLens
 
+Youtube link: https://youtu.be/7Bm1v3G9xG8
+
 A beautiful, truly zero-config Firefox extension that reads every open tab and summarizes each one in 1–2 sentences.
 
-**No API key. No signup. No account.** Just install and click.
+Just install and click.
 
 ![TabLens](icons/icon-128.png)
-
-## How
-
-TabLens calls [**Pollinations AI**](https://pollinations.ai) — a free, open, keyless LLM gateway (wraps GPT-4o-mini–class models). You send a prompt over plain HTTPS, it returns text. That's it.
 
 ## Features
 
@@ -55,10 +53,6 @@ README.md
 - Outbound traffic goes **only** to `https://text.pollinations.ai/`.
 - No analytics, telemetry, or third-party servers beyond the LLM call.
 - We send `private: true` in each request so Pollinations does not publish or cache your prompts on their public feeds.
-
-## Known limits of a keyless service
-
-Pollinations is free and has occasional rate limits or brief downtime. TabLens handles these gracefully with clear per-tab error messages ("Rate limited — try again shortly", "Service busy", etc.), and the 5-minute in-memory cache means retries usually just work.
 
 ## License
 
