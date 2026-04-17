@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TabLens</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M11 3a8 8 0 1 0 5.293 14.293l3.707 3.707 1.414-1.414-3.707-3.707A8 8 0 0 0 11 3zm0 2a6 6 0 1 1 0 12 6 6 0 0 1 0-12z" fill="currentColor"/>
+          <circle cx="11" cy="11" r="2.5" fill="currentColor"/>
+        </svg>
+      </div>
+      <div class="brand-text">
+        <h1>TabLens</h1>
+        <p class="tagline">Every tab, in a sentence.</p>
+      </div>
+    </div>
+  </header>
+
+  <section class="toolbar">
+    <div class="stats">
+      <span id="tab-count" class="stat-pill">0 tabs</span>
+      <span id="status-pill" class="stat-pill status-idle">Ready</span>
+    </div>
+    <div class="actions">
+      <button id="refresh-btn" class="btn btn-primary">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 4V1L8 5l4 4V6a6 6 0 0 1 6 6 6 6 0 0 1-6 6 6 6 0 0 1-6-6H4a8 8 0 0 0 16 0 8 8 0 0 0-8-8z" fill="currentColor"/>
+        </svg>
+        <span>Summarize</span>
+      </button>
+    </div>
+  </section>
+
+  <main id="tabs-list" class="tabs-list" aria-live="polite"></main>
+
+  <template id="tab-item-template">
+    <article class="tab-card">
+      <div class="tab-favicon">
+        <img alt="" />
+      </div>
+      <div class="tab-content">
+        <div class="tab-title-row">
+          <h3 class="tab-title"></h3>
+          <span class="tab-domain"></span>
+        </div>
+        <p class="tab-summary">
+          <span class="shimmer"></span>
+          <span class="shimmer shimmer-short"></span>
+        </p>
+      </div>
+      <button class="tab-open icon-btn" title="Switch to tab" aria-label="Switch to tab">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14 3v2h3.59L8.29 14.29l1.42 1.42L19 6.41V10h2V3h-7z" fill="currentColor"/>
+          <path d="M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7z" fill="currentColor"/>
+        </svg>
+      </button>
+    </article>
+  </template>
+
+  <footer class="app-footer">
+    <span>No key. No signup. Just summaries.</span>
+    <span class="badge">pollinations.ai</span>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>
