@@ -2,10 +2,7 @@
 
 https://youtu.be/7Bm1v3G9xG8
 
-A beautiful, truly zero-config Firefox extension that reads every open tab and summarizes each one in 1–2 sentences.
-
-Just install and click.
-
+A beautiful, truly zero-config Firefox extension that reads every open tab and summarizes each one in 1–2 sentences. 
 ![TabLens](icons/icon-128.png)
 
 ## Features
@@ -18,16 +15,7 @@ Just install and click.
 - **In-memory cache** — recently summarized tabs don't re-hit the API for 5 minutes; invalidated automatically on navigation.
 - **Private** — page content only leaves your browser when you press Summarize, and only to `text.pollinations.ai`. No telemetry.
 
-## Install (development)
-
-1. Open Firefox → `about:debugging#/runtime/this-firefox`
-2. Click **Load Temporary Add-on…**
-3. Select `manifest.json` from this folder
-4. Click the TabLens icon in your toolbar → **Summarize**
-
-For a permanent install, the package must be signed via [addons.mozilla.org](https://addons.mozilla.org).
-
-## Repo structure (flat)
+## Repo structure
 
 ```
 manifest.json        MV3 manifest (Firefox 115+)
